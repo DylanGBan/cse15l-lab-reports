@@ -14,8 +14,7 @@ __How to Install VS Code__
 
 _(Your terminal should look something similar to this)_
 
-![Image]()
-
+![Image](DylanGBan/cse15l-lab-reports/Screenshot2023-01-11at3.52.32PM.png)
 
 
 
