@@ -27,5 +27,13 @@ and clicking terminal then click new terminal.
 
  > $ is used to write commands and should not be included when you write the command in to the terminal. 
 
+- Once typed, you should be prompted this message in your terminal. 
+
+```
+   The authenticity of host 'ieng6.ucsd.edu (128.54.70.227)' can't be established.
+   RSA key fingerprint is SHA256:ksruYwhnYH+sySHnHAtLUHngrPEyZTDl/1x99wUQcec.Are you 
+   sure you want to continue connecting (yes/no/[fingerprint])?
+```
+
 
 
