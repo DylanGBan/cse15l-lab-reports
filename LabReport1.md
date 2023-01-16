@@ -1,5 +1,4 @@
-CSE 15L Lab Report 1
-===========================================================================================================================================================
+# CSE 15L Lab Report 1
 
 
 
@@ -65,11 +64,20 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lwi23
 <font size= "10"> Now you have successfully done remote connecting! </font>
 
 
-__Trying Commands Now That You Have Successfully Connected__
+__Trying Commands Now That You Have Successfully Remote Connected__
 
-> Here are a list of commands:
+== Here are some commands that you can try: ==.
 
-* 
+* cd
+* ls 
+* pwd
+* mkdir
+* cp
+* cd~
+* la -lat 
+
+
+
 
 
 
