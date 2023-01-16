@@ -35,49 +35,64 @@ and clicking terminal then click new terminal.
 ```
 > You want to type yes, allowing you to remote connect and conutinue on. 
 
-- After typing yes, you will be prompted to enter your password. This password being your SingleOn password. 
+- After typing yes, you will be prompted to enter your password. This password being your Student SSO password. 
 
 > _If you want to resert your password ([course-specific account lookup](https://sdacs.ucsd.edu/~icc/index.php)) this link will help you do so._
 
 - When the password is entered correctly, your terminal will output
 
-```
-# Now on remote server
-Last login: Sun Jan  2 14:03:05 2022 from 107-217-10-235.lightspeed.sndgca.sbcglobal.net
-quota: No filesystem specified.
-Hello cs15lwi23zz, you are currently logged into ieng6-203.ucsd.edu
+ ```
+ # Now on remote server
+ Last login: Sun Jan  2 14:03:05 2022 from 107-217-10-235.lightspeed.sndgca.sbcglobal.net
+ quota: No filesystem specified.
+ Hello cs15lwi23zz, you are currently logged into ieng6-203.ucsd.edu
 
-You are using 0% CPU on this system
+ You are using 0% CPU on this system
 
-Cluster Status 
-Hostname     Time    #Users  Load  Averages  
-ieng6-201   23:25:01   0  0.08,  0.17,  0.11
-ieng6-202   23:25:01   1  0.09,  0.15,  0.11
-ieng6-203   23:25:01   1  0.08,  0.15,  0.11
+ Cluster Status 
+ Hostname     Time    #Users  Load  Averages  
+ ieng6-201   23:25:01   0  0.08,  0.17,  0.11
+ ieng6-202   23:25:01   1  0.09,  0.15,  0.11
+ ieng6-203   23:25:01   1  0.08,  0.15,  0.11
 
-Sun Jan 02, 2022 11:28pm - Prepping cs15lwi23
+ Sun Jan 02, 2022 11:28pm - Prepping cs15lwi23
 
-```
+ ```
 
 > NOTE: The time and date and other things in this message are not going to be exact to you and will very per person and operating system.
+ 
+- Now you have successfully done remote connecting!
 
-<font size= "10"> Now you have successfully done remote connecting! </font>
+> What a successful remote connect looks like:
 
-
-__Trying Commands Now That You Have Successfully Remote Connected__
-
-== Here are some commands that you can try: ==.
-
-* cd
-* ls 
-* pwd
-* mkdir
-* cp
-* cd~
-* la -lat 
+![](TerminalofRemoteConnect.png)
 
 
+__Trying Commands Now That You Have Successfully Connected Remotely__
 
+>___Here are some commands that you can try:___
+
+`cd`
+
+`ls` 
+
+`pwd`
+
+`mkdir`
+
+`cp`
+
+`cd~`
+
+`la -lat`
+
+- Enter some commands listed above and try to figure out what they do. 
+
+> Your terminal should look similar to this when running the commands: _pwd_, _cd_, _ls_, _-lat_, and _ls -a_.
+
+![](Screenshot%202023-01-11%20at%203.52.32%20PM.png)
+
+- These commands are very useful in opening the contents of a file and navigating through the remote computer.
 
 
 
