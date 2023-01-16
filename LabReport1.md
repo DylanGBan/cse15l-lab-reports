@@ -65,4 +65,11 @@ Sun Jan 02, 2022 11:28pm - Prepping cs15lwi23
 <font size= "10"> Now you have successfully done remote connecting! </font>
 
 
+__Trying Commands Now That You Have Successfully Connected__
+
+> Here are a list of commands:
+
+* 
+
+
 
