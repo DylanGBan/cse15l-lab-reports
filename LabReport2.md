@@ -46,7 +46,7 @@ class StringServer {
 
 >__Note__ - Working example: 
 
-
+![]{LabReport2Example2.png};
  
 
 
