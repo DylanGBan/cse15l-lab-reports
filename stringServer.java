@@ -3,10 +3,6 @@ import java.net.URI;
 import java.util.ArrayList;
 
 class Handler implements URLHandler {
-   
-    String end = "There is no word!";
-
-    ArrayList<String> stringList = new ArrayList<>();
 
     StringBuilder searchString = new StringBuilder();
 
