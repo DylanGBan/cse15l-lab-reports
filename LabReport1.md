@@ -72,19 +72,17 @@ __Trying Commands Now That You Have Successfully Connected Remotely__
 
 >___Here are some commands that you can try:___
 
-`cd`
+`cd - Change directory allowing the user to go inside of a different working directory`
 
-`ls` 
+`ls - list allows the user to see all of the working directory in that location` 
 
-`pwd`
+`pwd - print working directory allows the user to see the path of that directory`
 
-`mkdir`
+`mkdir - make a directory allows the user to create a directory`
 
-`cp`
+`cp - copy allows the user to copy a file or directory`
 
-`cd~`
-
-`la -lat`
+`ls -a - list the content of a directory for the user (even the hidden files)`
 
 - Enter some commands listed above and try to figure out what they do. 
 
