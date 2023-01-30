@@ -2,7 +2,9 @@
 
 > ***StringServer code:***
  
-<pre><code>import java.io.IOException; 
+```java 
+
+import java.io.IOException; 
 import java.net.URI; 
 import java.util.ArrayList;
 
@@ -41,7 +43,8 @@ class StringServer {
 
         newServer.start(port, new Handler());
     }
-} </code></pre>
+}
+```
 
 
 > ***Working example:***
@@ -74,7 +77,8 @@ class StringServer {
 
 __Note__: Input that causea symptoms &darr;
 
-<pre><code>import static org.junit.Assert.*;
+```java
+import static org.junit.Assert.*;
 
 import org.junit.*;
 
@@ -107,13 +111,15 @@ assertEquals(7.5, ArrayExamples.averageWithoutLowest(input1), 0.000001);
 
 }
 
-}</code></pre>
+}
+```
 
 
 
 __Note__: Input that doesn't cause symptoms &darr;
 
-<pre><code>import static org.junit.Assert.*;
+```java
+import static org.junit.Assert.*;
 
 import org.junit.*;
 
@@ -142,7 +148,9 @@ assertEquals(7.5, ArrayExamples.averageWithoutLowest(input1), 0.000001);
 
 }
 
-}</code></pre>
+}
+
+```
 
 
 __Note__: Symptoms from code
@@ -157,7 +165,8 @@ __Note__: Code before and after
 
 - Before (with bugs): 
   
-<pre><code> public class ArrayExamples {   			
+```java
+public class ArrayExamples {   			
 
   // Changes the input array to be in reversed order
   static void reverseInPlace(int[] arr) {
@@ -191,12 +200,14 @@ __Note__: Code before and after
     }
     return sum / (arr.length - 1);
   }
-}</code></pre>
+}
+```
 
 
 
 - After (bugs fixed):
-<pre><code>public class ArrayExamples {
+```java
+public class ArrayExamples {
 
   // Changes the input array to be in reversed order
   static void reverseInPlace(int[] arr) {
@@ -237,7 +248,8 @@ __Note__: Code before and after
     }
     return sum / (arr.length - count);
   }
-}</code></pre>
+}
+```
 
 >__Note__: This code fixes the issues in the methods `reverseInPlace()`, `reversed()`, and `averageWithoutLowest()` with both reversed methods needing there contents reassined into a holder array allowing for the elements to be properly reversed. The only difference is in `reversed()` the array that needed to be returnd was fixed to return a new array object. The issue with `averageWithoutLowest()` was in the instance of the lowest number being listed more than once inside of the double array. In the original code, the sum was divided by one (accounting for one instance of the lowest number) but the adjusted code above accounts for the lowest number being listed more than one by increasing a counter each time the lowest number is iniside of the double array, and taking that counter value and subtracting it by the array's length.
 
