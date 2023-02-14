@@ -250,7 +250,7 @@ berlitz2:582$ grep -c "the" Algarve-History.txt
 
 ***Grep -n***
 
-- Grep -n prints out the line containg the word and the line number. It also prints out the relevant path to the file that contains the word searched for.
+- Grep -n prints out the line containg the word and the line number.
 
 > An example of grep -n:
 
@@ -294,7 +294,7 @@ berlitz2:554$ grep -n "California" California-History.txt
 56:Recent earthquakes — one in San Francisco in 1989 and another that hit Los Angeles in 1994 — have served as reminders that Californians continue to live in the shadow of The Big One — the major earthquake that experts predict will strike in the next 30 years. It says a lot for the attractions of life in California — and the optimism of those who continue to enjoy it — that despite this dire prediction, millions of people still seek their future in the Golden State’s promised land.
 ```
 
--
+- &uarr; The command above ```grep -n "California" California-History.txt ``` searched for "California" in the file California-History.txt, then returns back the line containing the word and the line number. 
 
 > An example of grep -n with grep -r:
 
@@ -310,3 +310,4 @@ berlitz2/Bahamas-History.txt:10:In 1648 a group of English Puritans from Bermuda
 berlitz2/Bahamas-History.txt:19:News traveled slowly in those days. The Treaty of Versailles in 1783 formally restored the Bahamas to the British, but actual liberation came through a famous escapade that would never have happened in the age of the telegraph. Lieutenant-Colonel Andrew Deveaux, a loyalist from South Carolina, sailed from Florida with six ships, picked up men and fishing boats at Harbour Island and Eleuthera, and “invaded” Nassau. Though vastly outnumbered and outgunned, Deveaux employed elaborate ruses with his little boats to convince the Spanish defenders that his force was overpowering. The humiliating Spanish surrender is proudly recalled in Bahamian history, even though it was all unnecessary: the peace treaty had been signed the previous week.
 (etc.)
 ```
+- &uarr; The command above ```grep -r -n "sailed" berlitz2``` searched for "sailed" in the directory berlitz2, then returns back the line containing the word, line number, and relvant path. This is useful because we can now find which exact line contains the searched for word. This allows us to have more information on where the word is located. 
