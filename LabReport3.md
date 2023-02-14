@@ -206,3 +206,29 @@ written_2/travel_guides/berlitz2/Vallarta-WhatToDo.txt
 written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
 ```
 - &uarr; The command above ```grep -l -r "sail" written_2 > grep-results.txt``` searched for sailed in the directory written_2, then returns back the path that contains sailed. This can be used to find out where the word is located when a directory contains multipule sub directories. 
+
+***Grep -c***
+
+- Grep -c returns back a count of how many times the word that is searched for is inside of the inputted file
+
+```console
+berlitz2:581$ pwd    
+/home/linux/ieng6/cs15lwi23/cs15lwi23acp/skill-demo1-server/skill-demo1-data/written_2/travel_guides/berlitz2
+berlitz2:580$ ls
+Algarve-History.txt      Bahamas-Intro.txt        Berlin-WhatToDo.txt       Canada-WhereToGo.txt         CostaBlanca-History.txt   Paris-WhatToDo.txt
+Algarve-Intro.txt        Bahamas-WhatToDo.txt     Berlin-WhereToGo.txt      CanaryIslands-History.txt    CostaBlanca-WhatToDo.txt  Paris-WhereToGo.txt
+Algarve-WhatToDo.txt     Bahamas-WhereToGo.txt    Bermuda-WhatToDo.txt      CanaryIslands-WhatToDo.txt   Crete-History.txt         Poland-History.txt
+Algarve-WhereToGo.txt    Bali-History.txt         Bermuda-WhereToGo.txt     CanaryIslands-WhereToGo.txt  Crete-WhatToDo.txt        Poland-WhatToDo.txt
+Amsterdam-History.txt    Bali-WhatToDo.txt        Bermuda-history.txt       Cancun-History.txt           Crete-WhereToGo.txt       Portugal-History.txt
+Amsterdam-Intro.txt      Bali-WhereToGo.txt       Boston-WhereToGo.txt      Cancun-WhatToDo.txt          CstaBlanca-WhereToGo.txt  Portugal-WhatToDo.txt
+Amsterdam-WhatToDo.txt   Barcelona-History.txt    Budapest-History.txt      Cancun-WhereToGo.txt         Cuba-History.txt          Portugal-WhereToGo.txt
+Amsterdam-WhereToGo.txt  Barcelona-WhatToDo.txt   Budapest-WhatToDo.txt     China-History.txt            Cuba-WhatToDo.txt         PuertoRico-History.txt
+Athens-History.txt       Barcelona-WhereToGo.txt  Budapest-WhereoGo.txt     China-WhatToDo.txt           Cuba-WhereToGo.txt        PuertoRico-WhatToDo.txt
+Athens-Intro.txt         Beijing-History.txt      California-History.txt    China-WhereToGo.txt          Nepal-History.txt         PuertoRico-WhereToGo.txt
+Athens-WhatToDo.txt      Beijing-WhatToDo.txt     California-WhatToDo.txt   Costa-History.txt            Nepal-WhatToDo.txt        Vallarta-History.txt
+Athens-WhereToGo.txt     Beijing-WhereToGo.txt    California-WhereToGo.txt  Costa-WhatToDo.txt           Nepal-WhereToGo.txt       Vallarta-WhatToDo.txt
+Bahamas-History.txt      Berlin-History.txt       Canada-History.txt        Costa-WhereToGo.txt          NewOrleans-History.txt    Vallarta-WhereToGo.txt
+berlitz2:582$ grep -c "the" Algarve-History.txt 
+32
+```
+- &uarr; The command above ```grep -c "the" Algarve-History.txt``` searched for the in the file Algarve-History.txt, then returns back the number of times the was present in this file. This can be used to count of main keywords are in a file, as grep by it's self will only return the file no matter how many times it is present. 
