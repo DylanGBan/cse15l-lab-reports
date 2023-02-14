@@ -414,3 +414,10 @@ berlitz2/Bahamas-History.txt:19:News traveled slowly in those days. The Treaty o
 (etc.)
 ```
 - &uarr; The command above ```grep -r -n "sailed" berlitz2``` searched for "sailed" in the directory berlitz2, then returns back the line containing the word, line number, and relvant path. This is useful because we can now find which exact line contains the searched for word. This allows us to have more information on where the word is located. 
+
+---------------------------------------------------------------***Work Cited***-----------------------------------------------------------------
+Information about grep options:
+
+- Using the command (man grep)
+
+- [GrepInfo](https://www.geeksforgeeks.org/grep-command-in-unixlinux/)
