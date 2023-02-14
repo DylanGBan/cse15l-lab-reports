@@ -111,7 +111,20 @@ grep-results2.txt:grep-results.txt:written_2/travel_guides/berlitz2/PuertoRico-W
 
 ***Grep -l***
 
-- Grep -l returns back the path that contains the word that is listed. This can be paired with Grep -r to look in a directory.
+- Grep -l returns back the file that contains the word that is listed. This can be paired with Grep -r to look in a directory.
+
+> An example of grep -l:
+
+```console 
+travel_guides:556$ ls
+berlitz1  berlitz2
+travel_guides:557$ cd ./berlitz2
+berlitz2:559$ grep -l "San Diego" California-History.txt 
+California-History.txt
+berlitz2:561$ grep -l "kmfkbdakfb" California-History.txt 
+berlitz2:561$
+```
+- &uarr; The command above ```grep -l "San Diego" California-History.txt ``` searched for "San Diego" in the file California-History.txt, then returns back the file that contains San Diego. Notice above when I try to find the word "kmfkbdakfb" in the file California-History.txt nothing is returned, meaning that word is not in California-History.txt.
 
 > An example of grep -l -r being used together:
 
@@ -220,11 +233,13 @@ written_2/travel_guides/berlitz2/Vallarta-History.txt
 written_2/travel_guides/berlitz2/Vallarta-WhatToDo.txt
 written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
 ```
-- &uarr; The command above ```grep -l -r "sail" written_2 > grep-results.txt``` searched for "sailed" in the directory written_2, then returns back the path that contains sailed. This can be used to find out where the word is located when a directory contains multipule sub directories. 
+- &uarr; The command above ```grep -l -r "sail" written_2 > grep-results.txt``` searched for "sailed" in the directory written_2, then returns back the path that contains sailed. This can be used to find out where the word is located when a directory contains multipule sub directories. This can als be helpful to see if a certain file contains a keyword that we are searching for. 
 
 ***Grep -c***
 
 - Grep -c returns back a count of how many times the word that is searched for is inside of the inputted file
+
+> An example of grep -c:
 
 ```console
 berlitz2:581$ pwd    
@@ -246,7 +261,95 @@ Bahamas-History.txt      Berlin-History.txt       Canada-History.txt        Cost
 berlitz2:582$ grep -c "the" Algarve-History.txt 
 32
 ```
-- &uarr; The command above ```grep -c "the" Algarve-History.txt``` searched for "the" in the file Algarve-History.txt, then returns back the number of times the word was present in this file. This can be used to count of main keywords are in a file, as grep by it's self will only return the file no matter how many times it is present. 
+- &uarr; The command above ```grep -c "the" Algarve-History.txt``` searched for "the" in the file Algarve-History.txt, then returns back the number of times the word was present in this file. 
+
+>An example of grep -c -r:
+
+```console
+travel_guides:563$ ls        
+berlitz1  berlitz2
+travel_guides:564$ grep -r -c "the" berlitz2
+berlitz2/Algarve-History.txt:32
+berlitz2/Algarve-Intro.txt:21
+berlitz2/Algarve-WhatToDo.txt:43
+berlitz2/Algarve-WhereToGo.txt:147
+berlitz2/Amsterdam-History.txt:37
+berlitz2/Amsterdam-Intro.txt:13
+berlitz2/Amsterdam-WhatToDo.txt:43
+berlitz2/Amsterdam-WhereToGo.txt:120
+berlitz2/Athens-History.txt:44
+berlitz2/Athens-Intro.txt:15
+berlitz2/Athens-WhatToDo.txt:45
+berlitz2/Athens-WhereToGo.txt:126
+berlitz2/Bahamas-History.txt:30
+berlitz2/Bahamas-Intro.txt:17
+berlitz2/Bahamas-WhatToDo.txt:45
+berlitz2/Bahamas-WhereToGo.txt:130
+berlitz2/Bali-History.txt:25
+berlitz2/Bali-WhatToDo.txt:42
+berlitz2/Bali-WhereToGo.txt:165
+berlitz2/Barcelona-History.txt:22
+berlitz2/Barcelona-WhatToDo.txt:33
+berlitz2/Barcelona-WhereToGo.txt:124
+berlitz2/Beijing-History.txt:24
+berlitz2/Beijing-WhatToDo.txt:45
+berlitz2/Beijing-WhereToGo.txt:113
+berlitz2/Berlin-History.txt:45
+berlitz2/Berlin-WhatToDo.txt:40
+berlitz2/Berlin-WhereToGo.txt:168
+berlitz2/Bermuda-WhatToDo.txt:62
+berlitz2/Bermuda-WhereToGo.txt:97
+berlitz2/Bermuda-history.txt:29
+berlitz2/Boston-WhereToGo.txt:149
+berlitz2/Budapest-History.txt:34
+berlitz2/Budapest-WhatToDo.txt:49
+berlitz2/Budapest-WhereoGo.txt:155
+berlitz2/California-History.txt:40
+berlitz2/California-WhatToDo.txt:49
+berlitz2/California-WhereToGo.txt:151
+berlitz2/Canada-History.txt:71
+berlitz2/Canada-WhereToGo.txt:423
+berlitz2/CanaryIslands-History.txt:28
+berlitz2/CanaryIslands-WhatToDo.txt:50
+berlitz2/CanaryIslands-WhereToGo.txt:117
+berlitz2/Cancun-History.txt:21
+berlitz2/Cancun-WhatToDo.txt:44
+berlitz2/Cancun-WhereToGo.txt:110
+berlitz2/China-History.txt:63
+berlitz2/China-WhatToDo.txt:42
+berlitz2/China-WhereToGo.txt:415
+berlitz2/Costa-History.txt:33
+berlitz2/Costa-WhatToDo.txt:42
+berlitz2/Costa-WhereToGo.txt:137
+berlitz2/CostaBlanca-History.txt:27
+berlitz2/CostaBlanca-WhatToDo.txt:75
+berlitz2/Crete-History.txt:33
+berlitz2/Crete-WhatToDo.txt:50
+berlitz2/Crete-WhereToGo.txt:135
+berlitz2/CstaBlanca-WhereToGo.txt:115
+berlitz2/Cuba-History.txt:27
+berlitz2/Cuba-WhatToDo.txt:31
+berlitz2/Cuba-WhereToGo.txt:149
+berlitz2/Nepal-History.txt:36
+berlitz2/Nepal-WhatToDo.txt:81
+berlitz2/Nepal-WhereToGo.txt:104
+berlitz2/NewOrleans-History.txt:43
+berlitz2/Paris-WhatToDo.txt:31
+berlitz2/Paris-WhereToGo.txt:146
+berlitz2/Poland-History.txt:37
+berlitz2/Poland-WhatToDo.txt:36
+berlitz2/Portugal-History.txt:39
+berlitz2/Portugal-WhatToDo.txt:48
+berlitz2/Portugal-WhereToGo.txt:281
+berlitz2/PuertoRico-History.txt:22
+berlitz2/PuertoRico-WhatToDo.txt:57
+berlitz2/PuertoRico-WhereToGo.txt:116
+berlitz2/Vallarta-History.txt:32
+berlitz2/Vallarta-WhatToDo.txt:61
+berlitz2/Vallarta-WhereToGo.txt:111
+```
+
+- &uarr; The command above ```grep -r -c "the" berlitz2``` searched for "the" in the directory berlitz2, then returns back the number of times the word was present in each file. This can be used to count of main keywords are in a file, as grep by it's self will only return the file no matter how many times it is present. This can also be used to find out which files don't contain the certain kerword that is searched. 
 
 ***Grep -n***
 
