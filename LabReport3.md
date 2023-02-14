@@ -40,7 +40,7 @@ became a rich maritime superpower.
 - &uarr; The command above ```grep "sailed" Algarve-History.txt``` searched for sailed in the file Algarve-History.txt, then returns back the line
 that contains the searched word. 
 
-> These results can also be saved in a file that you create using the ```>``` operator:
+>__Note__: These results can also be saved in a file that you create using the ```>``` operator:
 
 ```console
 berlitz2:513$ grep "sailed" Algarve-History.txt > grep-results.txt
@@ -75,9 +75,7 @@ became a rich maritime superpower.
 ```
 - &uarr; The command above ```grep "sailed" Algarve-History.txt > grep-results.txt``` searched for sailed in the file Algarve-History.txt, then returns back the line that contains the searched word and stores it in grep-results.txt.
 
->__Note__: Grep by it's self is useful, but we can make it more efficant with some more command lines. 
-
-***Grep -r ***
+***Grep -r***
 
 - Grep -r where -r means recursive will search for the inputted word/string in the every file of the given directory
 
@@ -92,5 +90,119 @@ travel_guides:546$ cat grep-results.txt
 /home/linux/ieng6/cs15lwi23/cs15lwi23acp/skill-demo1-server/skill-demo1-data/written_2/travel_guides/berlitz2/Bali-WhereToGo.txt:Farther south, the dry scrub-covered hills slowly give way to semi-desert, with an occasional grove of coconut palms playing the role of oasis. Energetic resurfacing and new construction has transformed the road, but Kuta Beach is still far from resembling its namesake in Bali. Most of the time, its white coral sands are largely deserted. Most accommodations are still in simple cottages, some with a modest restaurant as well. Otherwise you can find a cheap warung. Novotel’s Mandalika Resort, designed to resemble a Sasak Village by the sands of Kuta Beach, is the one upscale vacation complex in the area. Hotels in the area can arrange transportation to some of the beautiful, isolated beaches nearby. The Sunday morning market at the hamlet of Kuta is lively and interesting. Once a year in February or March, a few days after the second full moon of the year, crowds gather on the beach for Bau Nyale. The all-night festival is timed to coincide with the hatching of strange worms from the sea bed.
 /home/linux/ieng6/cs15lwi23/cs15lwi23acp/skill-demo1-server/skill-demo1-data/written_2/travel_guides/berlitz2/Bermuda-WhereToGo.txt:You will come first to the Arboretum (bus route #3), 9 hectares (22 acres) of lawns and woods filled with native trees. Separate swathes of land concentrate on collections of ficus and palms, with an area of general woodland beyond. It’s a great place for children to run wild or explore in the undergrowth.
 /home/linux/ieng6/cs15lwi23/cs15lwi23acp/skill-demo1-server/skill-demo1-data/written_2/travel_guides/berlitz2/Bermuda-WhereToGo.txt:Middle Road eventually reaches the village of Flatts at the edge of Harrington Sound. The sound, some 3 km (2 miles) in diameter, is thought to be a huge caldera that formed after a powerful volcanic eruption. Some areas of this inland sea are immensely deep, attracting marine creatures to the safe waters. Boats also take advantage of the protective shield, and in summer (April–October) diving and snorkeling are popular pastimes. A narrow bridge fords the gap between the sound and the open sea through Flatts Inlet. The tidal waters are constantly flowing in and out through the 9-m (30-ft) opening. A number of boats rest on the waters of Flatts Inlet, which is one of the most photogenic spots on the island. The waters have a translucent turquoise hue that appears almost artificial, and the swaying palms create a truly tropical scene.
-etc.
+(etc.)
 ```
+- &uarr; The command above ```grep -r "palms" ~/skill-demo1-server/skill-demo1-data/written_2/travel_guides/berlitz2 > grep-results.txt``` searched for palms in the directory berlitz2, then returns back the line that contains the searched word and the full path and stores it in grep-results.txt. Recursive is very useful when you dont know which file contains the word you are searching for or if the directory contains large amounts of files.
+
+***Grep -l***
+
+- Grep -l returns back the path that contains the word that is listed. This can be paired with Grep -r to look in a directory.
+
+> An example of grep -l -r being used together:
+
+``` console
+skill-demo1-data:564$ ls
+written_2
+skill-demo1-data:565$ grep -l -r "sail" written_2 > grep-results.txt
+skill-demo1-data:566$ ls
+grep-results.txt  written_2
+skill-demo1-data:567$ cat grep-results.txt
+written_2/non-fiction/OUP/Castro/chZ.txt
+written_2/non-fiction/OUP/Fletcher/ch9.txt
+written_2/non-fiction/OUP/Kauffman/ch4.txt
+written_2/travel_guides/berlitz1/HandRIsrael.txt
+written_2/travel_guides/berlitz1/HandRJamaica.txt
+written_2/travel_guides/berlitz1/HistoryEgypt.txt
+written_2/travel_guides/berlitz1/HistoryFrance.txt
+written_2/travel_guides/berlitz1/HistoryIbiza.txt
+written_2/travel_guides/berlitz1/HistoryIndia.txt
+written_2/travel_guides/berlitz1/HistoryItaly.txt
+written_2/travel_guides/berlitz1/HistoryJamaica.txt
+written_2/travel_guides/berlitz1/HistoryMadeira.txt
+written_2/travel_guides/berlitz1/HistoryMalaysia.txt
+written_2/travel_guides/berlitz1/HistoryMallorca.txt
+written_2/travel_guides/berlitz1/IntroGreek.txt
+written_2/travel_guides/berlitz1/IntroMallorca.txt
+written_2/travel_guides/berlitz1/WhatToFWI.txt
+written_2/travel_guides/berlitz1/WhatToFrance.txt
+written_2/travel_guides/berlitz1/WhatToGreek.txt
+written_2/travel_guides/berlitz1/WhatToHongKong.txt
+written_2/travel_guides/berlitz1/WhatToIbiza.txt
+written_2/travel_guides/berlitz1/WhatToIsrael.txt
+written_2/travel_guides/berlitz1/WhatToIstanbul.txt
+written_2/travel_guides/berlitz1/WhatToJamaica.txt
+written_2/travel_guides/berlitz1/WhatToLakeDistrict.txt
+written_2/travel_guides/berlitz1/WhatToLosAngeles.txt
+written_2/travel_guides/berlitz1/WhatToMalaysia.txt
+written_2/travel_guides/berlitz1/WhatToMallorca.txt
+written_2/travel_guides/berlitz1/WhereToEgypt.txt
+written_2/travel_guides/berlitz1/WhereToFWI.txt
+written_2/travel_guides/berlitz1/WhereToFrance.txt
+written_2/travel_guides/berlitz1/WhereToGreek.txt
+written_2/travel_guides/berlitz1/WhereToHongKong.txt
+written_2/travel_guides/berlitz1/WhereToIbiza.txt
+written_2/travel_guides/berlitz1/WhereToIndia.txt
+written_2/travel_guides/berlitz1/WhereToItaly.txt
+written_2/travel_guides/berlitz1/WhereToJapan.txt
+written_2/travel_guides/berlitz1/WhereToMadrid.txt
+written_2/travel_guides/berlitz1/WhereToMalaysia.txt
+written_2/travel_guides/berlitz1/WhereToMallorca.txt
+written_2/travel_guides/berlitz2/Algarve-History.txt
+written_2/travel_guides/berlitz2/Algarve-Intro.txt
+written_2/travel_guides/berlitz2/Algarve-WhatToDo.txt
+written_2/travel_guides/berlitz2/Algarve-WhereToGo.txt
+written_2/travel_guides/berlitz2/Amsterdam-History.txt
+written_2/travel_guides/berlitz2/Amsterdam-WhatToDo.txt
+written_2/travel_guides/berlitz2/Amsterdam-WhereToGo.txt
+written_2/travel_guides/berlitz2/Athens-WhatToDo.txt
+written_2/travel_guides/berlitz2/Athens-WhereToGo.txt
+written_2/travel_guides/berlitz2/Bahamas-History.txt
+written_2/travel_guides/berlitz2/Bahamas-Intro.txt
+written_2/travel_guides/berlitz2/Bahamas-WhatToDo.txt
+written_2/travel_guides/berlitz2/Bahamas-WhereToGo.txt
+written_2/travel_guides/berlitz2/Bali-WhatToDo.txt
+written_2/travel_guides/berlitz2/Bali-WhereToGo.txt
+written_2/travel_guides/berlitz2/Barcelona-WhatToDo.txt
+written_2/travel_guides/berlitz2/Barcelona-WhereToGo.txt
+written_2/travel_guides/berlitz2/Berlin-History.txt
+written_2/travel_guides/berlitz2/Berlin-WhatToDo.txt
+written_2/travel_guides/berlitz2/Bermuda-WhatToDo.txt
+written_2/travel_guides/berlitz2/Bermuda-WhereToGo.txt
+written_2/travel_guides/berlitz2/Bermuda-history.txt
+written_2/travel_guides/berlitz2/Boston-WhereToGo.txt
+written_2/travel_guides/berlitz2/California-History.txt
+written_2/travel_guides/berlitz2/California-WhatToDo.txt
+written_2/travel_guides/berlitz2/California-WhereToGo.txt
+written_2/travel_guides/berlitz2/Canada-History.txt
+written_2/travel_guides/berlitz2/Canada-WhereToGo.txt
+written_2/travel_guides/berlitz2/CanaryIslands-History.txt
+written_2/travel_guides/berlitz2/CanaryIslands-WhatToDo.txt
+written_2/travel_guides/berlitz2/CanaryIslands-WhereToGo.txt
+written_2/travel_guides/berlitz2/Cancun-History.txt
+written_2/travel_guides/berlitz2/Cancun-WhatToDo.txt
+written_2/travel_guides/berlitz2/Cancun-WhereToGo.txt
+written_2/travel_guides/berlitz2/China-History.txt
+written_2/travel_guides/berlitz2/China-WhereToGo.txt
+written_2/travel_guides/berlitz2/Costa-WhatToDo.txt
+written_2/travel_guides/berlitz2/Costa-WhereToGo.txt
+written_2/travel_guides/berlitz2/CostaBlanca-History.txt
+written_2/travel_guides/berlitz2/CostaBlanca-WhatToDo.txt
+written_2/travel_guides/berlitz2/Crete-WhatToDo.txt
+written_2/travel_guides/berlitz2/Crete-WhereToGo.txt
+written_2/travel_guides/berlitz2/CstaBlanca-WhereToGo.txt
+written_2/travel_guides/berlitz2/Cuba-History.txt
+written_2/travel_guides/berlitz2/Cuba-WhatToDo.txt
+written_2/travel_guides/berlitz2/Cuba-WhereToGo.txt
+written_2/travel_guides/berlitz2/NewOrleans-History.txt
+written_2/travel_guides/berlitz2/Paris-WhereToGo.txt
+written_2/travel_guides/berlitz2/Portugal-History.txt
+written_2/travel_guides/berlitz2/Portugal-WhatToDo.txt
+written_2/travel_guides/berlitz2/Portugal-WhereToGo.txt
+written_2/travel_guides/berlitz2/PuertoRico-History.txt
+written_2/travel_guides/berlitz2/PuertoRico-WhatToDo.txt
+written_2/travel_guides/berlitz2/PuertoRico-WhereToGo.txt
+written_2/travel_guides/berlitz2/Vallarta-History.txt
+written_2/travel_guides/berlitz2/Vallarta-WhatToDo.txt
+written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
+```
+- &uarr; The command above ```grep -l -r "sail" written_2 > grep-results.txt``` searched for sailed in the directory written_2, then returns back the path that contains sailed. This can be used to find out where the word is located when a directory contains multipule sub directories. 
