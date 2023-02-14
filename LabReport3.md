@@ -37,7 +37,7 @@ of Good Hope and reaching India, respectively, and Pedro Álves Cabral claimed B
 Portuguese explorer, Ferdinand Magellan, led the first expedition to circumnavigate the world. Mercantilist Portugal 
 became a rich maritime superpower.
 ```
-- &uarr; The command above ```grep "sailed" Algarve-History.txt``` searched for sailed in the file Algarve-History.txt, then returns back the line
+- &uarr; The command above ```grep "sailed" Algarve-History.txt``` searched for "sailed" in the file Algarve-History.txt, then returns back the line
 that contains the searched word. 
 
 >__Note__: These results can also be saved in a file that you create using the ```>``` operator:
@@ -73,7 +73,7 @@ of Good Hope and reaching India, respectively, and Pedro Álves Cabral claimed B
 Portuguese explorer, Ferdinand Magellan, led the first expedition to circumnavigate the world. Mercantilist Portugal
 became a rich maritime superpower.
 ```
-- &uarr; The command above ```grep "sailed" Algarve-History.txt > grep-results.txt``` searched for sailed in the file Algarve-History.txt, then returns back the line that contains the searched word and stores it in grep-results.txt.
+- &uarr; The command above ```grep "sailed" Algarve-History.txt > grep-results.txt``` searched for "sailed" in the file Algarve-History.txt, then returns back the line that contains the searched word and stores it in grep-results.txt.
 
 ***Grep -r***
 
@@ -92,7 +92,7 @@ travel_guides:546$ cat grep-results.txt
 /home/linux/ieng6/cs15lwi23/cs15lwi23acp/skill-demo1-server/skill-demo1-data/written_2/travel_guides/berlitz2/Bermuda-WhereToGo.txt:Middle Road eventually reaches the village of Flatts at the edge of Harrington Sound. The sound, some 3 km (2 miles) in diameter, is thought to be a huge caldera that formed after a powerful volcanic eruption. Some areas of this inland sea are immensely deep, attracting marine creatures to the safe waters. Boats also take advantage of the protective shield, and in summer (April–October) diving and snorkeling are popular pastimes. A narrow bridge fords the gap between the sound and the open sea through Flatts Inlet. The tidal waters are constantly flowing in and out through the 9-m (30-ft) opening. A number of boats rest on the waters of Flatts Inlet, which is one of the most photogenic spots on the island. The waters have a translucent turquoise hue that appears almost artificial, and the swaying palms create a truly tropical scene.
 (etc.)
 ```
-- &uarr; The command above ```grep -r "palms" ~/skill-demo1-server/skill-demo1-data/written_2/travel_guides/berlitz2 > grep-results.txt``` searched for palms in the directory berlitz2, then returns back the line that contains the searched word and the full path and stores it in grep-results.txt. Recursive is very useful when you dont know which file contains the word you are searching for or if the directory contains large amounts of files.
+- &uarr; The command above ```grep -r "palms" ~/skill-demo1-server/skill-demo1-data/written_2/travel_guides/berlitz2 > grep-results.txt``` searched for "palms" in the directory berlitz2, then returns back the line that contains the searched word and the full path and stores it in grep-results.txt. Recursive is very useful when you dont know which file contains the word you are searching for or if the directory contains large amounts of files.
 
 ***Grep -l***
 
@@ -205,7 +205,7 @@ written_2/travel_guides/berlitz2/Vallarta-History.txt
 written_2/travel_guides/berlitz2/Vallarta-WhatToDo.txt
 written_2/travel_guides/berlitz2/Vallarta-WhereToGo.txt
 ```
-- &uarr; The command above ```grep -l -r "sail" written_2 > grep-results.txt``` searched for sailed in the directory written_2, then returns back the path that contains sailed. This can be used to find out where the word is located when a directory contains multipule sub directories. 
+- &uarr; The command above ```grep -l -r "sail" written_2 > grep-results.txt``` searched for "sailed" in the directory written_2, then returns back the path that contains sailed. This can be used to find out where the word is located when a directory contains multipule sub directories. 
 
 ***Grep -c***
 
@@ -231,4 +231,23 @@ Bahamas-History.txt      Berlin-History.txt       Canada-History.txt        Cost
 berlitz2:582$ grep -c "the" Algarve-History.txt 
 32
 ```
-- &uarr; The command above ```grep -c "the" Algarve-History.txt``` searched for the in the file Algarve-History.txt, then returns back the number of times the was present in this file. This can be used to count of main keywords are in a file, as grep by it's self will only return the file no matter how many times it is present. 
+- &uarr; The command above ```grep -c "the" Algarve-History.txt``` searched for "the" in the file Algarve-History.txt, then returns back the number of times the word was present in this file. This can be used to count of main keywords are in a file, as grep by it's self will only return the file no matter how many times it is present. 
+
+***Grep -n***
+
+- Grep -n prints out the line containg the word and the line number. It also prints out the relevant path to the file that contains the word searched for.
+
+> An example of grep -n with grep -r:
+
+```console 
+travel_guides:527$ ls
+berlitz1  berlitz2
+travel_guides:532$ grep -r -n "sailed" berlitz2
+berlitz2/Algarve-History.txt:12:The Reconquest of Silves, not achieved for another 50 years, was a grisly affair. A mixed bag of Crusaders from northern Europe were recruited en route to their battles east in the Holy Land. They sailed upon the river port of Silves and, ignoring conditional offers of surrender, slew all the inhabitants (at no small loss to themselves) and pillaged the great treasures of the city.
+berlitz2/Algarve-History.txt:20:During Henry’s lifetime, Portugal’s caravels sailed beyond the most westerly point of Africa. They colonized the Atlantic islands of Madeira and the Azores, laying the foundations for the future Portuguese empire. Before the century was over, Henry’s compatriots Bartolomeu Dias and Vasco da Gama completed epic voyages, rounding the Cape of Good Hope and reaching India, respectively, and Pedro Álves Cabral claimed Brazil. Between 1519 and 1522 another Portuguese explorer, Ferdinand Magellan, led the first expedition to circumnavigate the world. Mercantilist Portugal became a rich maritime superpower.
+berlitz2/Algarve-WhereToGo.txt:102:Until comparatively recently, when the area silted into a tidal flat, Faro was a commercial and fishing port open to the Atlantic. Indeed, the Earl of Essex’s fleet had sailed right up to the city’s Arab fortifications. Today small fishing boats and pleasure craft must zigzag carefully amid the dunes and then creep beneath the railway bridge to enter the sleepy harbor.
+berlitz2/Amsterdam-History.txt:34:Expansion quickly peaked however, and the European powers who had carved up the New World set about testing each other in dynastic conflicts and colonial rivalry. The English were the main rivals of the Dutch on the high seas, and there were several wars between the two in the 17th and 18th centuries. In 1665–1667 the Dutch sailed up the River Medway and sank the British fleet moored there.
+berlitz2/Bahamas-History.txt:10:In 1648 a group of English Puritans from Bermuda, led by William Sayle, sailed to Bahamian waters and established the first permanent European settlement on the island they named Eleutheria (now Eleuthera) after the Greek word for freedom. The 70 colonists called themselves the Eleutherian Adventurers, but life was very difficult and the colony never flourished, though Sayle was long honored for the effort. In 1666 a smaller island (called Sayle’s island) with a fine harbor was settled by Bermudians and renamed New Providence. It was later to become known as Nassau, capital of the Bahamas.
+berlitz2/Bahamas-History.txt:19:News traveled slowly in those days. The Treaty of Versailles in 1783 formally restored the Bahamas to the British, but actual liberation came through a famous escapade that would never have happened in the age of the telegraph. Lieutenant-Colonel Andrew Deveaux, a loyalist from South Carolina, sailed from Florida with six ships, picked up men and fishing boats at Harbour Island and Eleuthera, and “invaded” Nassau. Though vastly outnumbered and outgunned, Deveaux employed elaborate ruses with his little boats to convince the Spanish defenders that his force was overpowering. The humiliating Spanish surrender is proudly recalled in Bahamian history, even though it was all unnecessary: the peace treaty had been signed the previous week.
+(etc.)
+```
