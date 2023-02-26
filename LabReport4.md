@@ -13,7 +13,7 @@ machine's ssh key has been saved into the remote server under my account.
 
 ![](Screenshot%202023-02-26%20at%201.04.19%20PM.png)
 
-> &uarr; Keys Pressed: `<command> + <c> , <command> + <v> , <enter>`
+> &uarr; Keys Pressed: `<command> + <c>`,`<command> + <v>`, `<enter>`
 
 > These keys were used to copy (`<command> + <c>`) the line `ssh cs15lwi23acp@ieng6.ucsd.edu` from my personal machine's notepad and 
 was pasted (`<command> + <v>`) in the ternmainl, which was then followed by a key press of (`<enter>`), allowing for the command to be excuted 
@@ -35,4 +35,10 @@ away the command was. Then using my up arrows ten times (`<up>`), I moved to the
 **Step 3:** 
 
 - Running the test file located in the `lab7` repository
+
+![](Screenshot%202023-02-26%20at%201.50.10%20PM.png)
+
+> &uarr; Keys Pressed: `<up> x5 + <enter>`, `<up> x6 + <enter>`
+
+> Before using my up arrow to go back to my past commands, I simply typed `cd lab7` to go into the correct directory and `History` in the terminal, allowing me to see how far away the command was. Then using my up arrows 5 times (`<up>`), I moved to the command wanted, then I clicked enter (`<enter>`) which compliled the testerfile leading me to use my up arrows 6 times (`<up>`) again and clicking enter (`<enter>`) which ran the tester file. 
 
