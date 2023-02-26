@@ -2,7 +2,7 @@
 
 ***Steps taken for time improvment -***
 
->__Warning__: These keyboard shortcuts are for mac and slightly differ from windows
+>__Warning__: These keyboard shortcuts are for mac, and slightly differ from windows
 
 **Step 1:**
 
@@ -30,7 +30,7 @@ and letting me login into the remote server.
 > &uarr; Keys Pressed: `<up> x10 + <enter>`
 
 > Before using my up arrow to go back to my past commands, I simply typed `History` in the terminal, allowing me to see how far 
-away the command was. Then using my up arrows ten times (`<up>`), I moved to the command wanted, then I clicked enter (`<enter>`) which clonned the git hub repository.
+away the command was. Then using my up arrow ten times (`<up>`), I moved to the command wanted, then I clicked enter (`<enter>`) which clonned the git hub repository.
 
 **Step 3:** 
 
@@ -40,5 +40,20 @@ away the command was. Then using my up arrows ten times (`<up>`), I moved to the
 
 > &uarr; Keys Pressed: `<up> x5 + <enter>`, `<up> x6 + <enter>`
 
-> Before using my up arrow to go back to my past commands, I simply typed `cd lab7` to go into the correct directory and `History` in the terminal, allowing me to see how far away the command was. Then using my up arrows 5 times (`<up>`), I moved to the command wanted, then I clicked enter (`<enter>`) which compliled the testerfile leading me to use my up arrows 6 times (`<up>`) again and clicking enter (`<enter>`) which ran the tester file. 
+> Before using my up arrow to go back to my past commands, I simply typed `cd lab7` to go into the correct directory and `History` in the terminal, allowing me to see how far away the command was. Then using my up arrow 5 times (`<up>`), I moved to the command wanted, then I clicked enter (`<enter>`) which compliled the testerfile leading me to use my up arrow 6 times (`<up>`) again and clicking enter (`<enter>`) which ran the tester file. 
+
+**Step 4:** 
+
+- Editing the file `ListExamples.java` using nano
+
+![](Screenshot%202023-02-26%20at%202.18.40%20PM.png)
+
+![](Screenshot%202023-02-26%20at%202.16.48%20PM.png)
+
+> &uarr; Keys Pressed: `<down> x42 + <right> x12 + <delete> + <click 2>`, `<control> + <x> + <y> + <enter>` 
+
+> Before being able to edit the file, the command `nano ListExamples.java` must be ran. When the command is ran, the file contents will appear and 
+now can be edited. Then using my down arrow 42 times (`<down>`), I got to the line which needed to be edited. Now using my right arrow 12 times 
+(`<right>`) I got to the character, `1`, that caused the error and delete it and put in a `2` instead. After that, I exit nano using (`<control> + <x>`)
+which then promps me to save my changes which I then type `y` allowing the changes to be saved. Then it promps me with the name of the file to be changed, but since I don't want it to be change, I just click (`<enter>`) to save the file under the same name.
 
