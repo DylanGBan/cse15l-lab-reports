@@ -36,7 +36,7 @@ away the command was. Then using my up arrow ten times (`<up>`), I moved to the 
 
 - Running the test file located in the `lab7` repository
 
-![](Screenshot%202023-02-26%20at%201.50.10%20PM.png)
+![](Screenshot%202023-02-26%20at%202.57.52%20PM.png)
 
 > &uarr; Keys Pressed: `<up> x5 + <enter>`, `<up> x6 + <enter>`
 
@@ -56,4 +56,17 @@ away the command was. Then using my up arrow ten times (`<up>`), I moved to the 
 now can be edited. Then using my down arrow 42 times (`<down>`), I got to the line which needed to be edited. Now using my right arrow 12 times 
 (`<right>`) I got to the character, `1`, that caused the error and delete it and put in a `2` instead. After that, I exit nano using (`<control> + <x>`)
 which then promps me to save my changes which I then type `y` allowing the changes to be saved. Then it promps me with the name of the file to be changed, but since I don't want it to be change, I just click (`<enter>`) to save the file under the same name.
+
+**Step 5:** 
+
+- Running the test file located in the `lab7` repository, after fixing the file
+
+![](Screenshot%202023-02-26%20at%202.56.38%20PM.png)
+
+> &uarr; Keys Pressed: `<up> x5 + <enter>`, `<up> x6 + <enter>`
+ 
+> I used my up arrow 5 times (`<up>`), I moved to the command wanted, then I clicked enter (`<enter>`) which compliled the testerfile leading me to use my up arrow 6 times (`<up>`) again and clicking enter (`<enter>`) which ran the tester file. 
+
+**Step 6:**
+
 
