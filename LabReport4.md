@@ -69,4 +69,14 @@ which then promps me to save my changes which I then type `y` allowing the chang
 
 **Step 6:**
 
+- Commit and pushing the file to my git hub repository
+
+![](Screenshot%202023-02-26%20at%204.38.21%20PM.png)
+![](Screenshot%202023-02-26%20at%204.37.59%20PM.png)
+
+> &uarr; Keys Pressed: `<up> + <enter>`, `<up> + <enter>`
+
+> Before using my up arrows, I entered the command `History` in the terminal. This allows me to see my past commands that I have used. I then use my up arrow (`<up>`) to navigate to the command I want to use, then click enter (`<enter>`). I do this for `git add`, `git commit -m`, and `git push`
+ 
+
 
