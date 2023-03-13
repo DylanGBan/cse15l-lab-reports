@@ -139,4 +139,11 @@ rm: remove write-protected regular file 'skill-demo1-server/skill-demo1-data/.gi
 [cs15lwi23acp@ieng6-201]:~:532$ ls
 [cs15lwi23acp@ieng6-201]:~:533$ 
 ```
-> 
+> &uarr; The command of `rm -r -f` is used in the same way as listed above, but now with the addition of `-I` the terminal 
+prompts the user if they want to recursively remove the iteams inside of the given directory.
+
+
+---------------------------------------------------------------***Work Cited***-----------------------------------------------------------------
+Information about rm options:
+
+- Using the command (man rm)
